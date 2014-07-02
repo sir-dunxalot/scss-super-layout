@@ -35,7 +35,6 @@ html, body {
   @media ($medium) {
     display: table-cell; // Horizontal sidebar at larger window sizes
     vertical-align: top;
-    @include rem(padding, $spacingMedium);
   }
 }
 
@@ -48,17 +47,8 @@ html, body {
 
 .content_wrapper {
   @include box-sizing(content-box);
-  @include rem(padding, $spacing);
   @extend %full_height;
   overflow-y: scroll;
-
-  @media ($small) {
-    @include rem(padding, $spacingSmall);
-  }
-
-  @media ($medium) {
-    @include rem(padding, $spacingMedium);
-  }
 }
 
 .content {
@@ -67,7 +57,7 @@ html, body {
   @extend %full_width;
 
   @media ($medium) {
-    @include rem(max-width, $contentWidth);
+    max-width: 300px; // CHANGE ME
   }
 }
 
