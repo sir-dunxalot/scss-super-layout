@@ -1,9 +1,11 @@
 scss-super-layout
 =================
 
-Super simple but clever responsive layout for sass-based apps
+Super simple but clever responsive layout for sass-based apps. Automatically has sidebar, scalable content, stacked nav bar, sticky footer, and full-size centering of hero units.
 
-Only caveat is the layout breaks a bit on firefox and requires the following code for Firefox broswers:
+Layout is in `layout.scss` and some useful helpers you may want to use in your app are in `placeholders.scss`.
+
+Only caveat is the layout breaks a bit on firefox and requires the following code for Firefox browsers:
 
 ```
 var contentWrapper = $('.content_wrapper');
