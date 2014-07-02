@@ -17,6 +17,9 @@ The page layout is as follows:
 }
 */
 
+$sidebarWidth: 300px;
+$stackedNavAt: 50em;
+
 html, body {
   @extend %full_height;
   @extend %full_width;
@@ -29,10 +32,10 @@ html, body {
 }
 
 .page_header {
-  @include rem(min-width, $sidebarWidth);
+  min-width: $sidebarWidth;
   display: table-header-group; // Vertical stacking at smaller window sizes
 
-  @media ($medium) {
+  @media (min-width: $stackedNavAt) {
     display: table-cell; // Horizontal sidebar at larger window sizes
     vertical-align: top;
   }
@@ -56,8 +59,8 @@ html, body {
   @extend %full_height;
   @extend %full_width;
 
-  @media ($medium) {
-    max-width: 300px; // CHANGE ME
+  @media (min-width: $stackedNavAt) {
+    min-width: $sidebarWidth;
   }
 }
 
