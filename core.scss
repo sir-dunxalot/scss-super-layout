@@ -7,10 +7,6 @@ TODO - Add block and inline-block classes
   width: 100%;
 }
 
-%row {
-  display: table-row;
-}
-
 %cell {
   display: table-cell;
 }
@@ -21,20 +17,4 @@ TODO - Add block and inline-block classes
 
 %full_height {
   height: 100%;
-}
-
-%relative {
-  position: relative;
-}
-
-%absolute {
-  position: absolute;
-}
-
-%block {
-  display: block;
-}
-
-%inline_block {
-  @include inline-block;
 }
